@@ -5,11 +5,7 @@
  */
 var kidsWithCandies = function(candies, extraCandies) {
 const maxCandies = Math.max(...candies);
-  const result = [];
-
-  for (let i = 0; i < candies.length; i++) {
-    result.push(candies[i] + extraCandies >= maxCandies);
-  }
+    const result = candies.map(candy => candy + extraCandies >= maxCandies)
 
   return result;
 }
